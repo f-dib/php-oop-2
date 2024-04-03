@@ -1,7 +1,7 @@
 <?php
 
-    class Food extends Product {
-        public $product_type;
+    class Games extends Product {
+        public $product_info;
         
         
         
@@ -14,9 +14,9 @@
          * @param  mixed $_image
          * @param  mixed $_product_type
          */
-        function __construct($_title, $_description, $_price, $_image, $_product_type){
+        function __construct($_title, $_description, $_price, $_image, $_product_info){
             parent::__construct($_title, $_description, $_price, $_image);
-            $this->product_type = $_product_type;
+            $this->product_info = $_product_info;
         }
     };
 
