@@ -5,7 +5,7 @@
         public $description;
         public $price;
         public $image;
-        public $cartegories;
+        public $categories;
 
 
         
@@ -23,7 +23,7 @@
             $this->description = $_description;
             $this->price =  $_price;
             $this->image = $_image;
-            $this->cartegories = $_categories;
+            $this->categories = $_categories;
         }
     }; 
 

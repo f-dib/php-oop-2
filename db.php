@@ -48,6 +48,7 @@
                             new Categories("Gatto"),
                             "Dotato di cuscino interno rimovibile");
 
+
     $products = [
         $product1,
         $product2,

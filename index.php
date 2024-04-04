@@ -10,6 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OOP2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
@@ -25,13 +26,14 @@
             foreach($products as $product) {
 
                 echo "
-                <div class=\"col-12 col-md-6 col-lg-4 pb-4 \">
-                    <div class=\"card h-100\">
+                <div class=\"col-12 col-md-6 col-lg-4 mb-4\">
+                    <div class=\"card position-relative\">
                         <img src=\"" . $product->image . "\" class=\"card-img-top h-75\" alt=\"   \">
                         <div class=\"card-body h-25\">
                             <h5 class=\"card-title\">". $product->title . "</h5>
                             <p class=\"card-text m-0\"> <span class=\"fw-bold pe-1\"> Durata: </span>" . $product->description . "</p>
                             <p class=\"card-text m-0\"> <span class=\"fw-bold pe-1\"> Anno di uscita: </span>" . $product->price . "</p>
+                            <div class=\"m-4 myfav text-black position-absolute top-0 end-0\">" . $product->categories->getIcon() . "</div>
                         </div>
                     </div>
                 </div>";
