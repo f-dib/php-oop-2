@@ -23,6 +23,15 @@
 
         <div class="row">
             <?php
+
+            if ($error) {
+                ?>
+                <div class="alert alert-warning" role="alert">
+                    <?= $error ?>
+                </div>
+                <?php
+            }
+
             foreach($products as $product) {
 
                 echo "
@@ -31,7 +40,7 @@
                         <img src=\"" . $product->image . "\" class=\"card-img-top\" alt=\"   \">
                         <div class=\"card-body\">
                             <h5 class=\"card-title\">". $product->title . "</h5>
-                            <p class=\"card-text m-0\"> <span class=\"fw-bold pe-1\"> Descrizione: </span>" . $product->description . "</p>
+                            <p class=\"card-text m-0\"> <span class=\"fw-bold pe-1\"> Descrizione: </span>€" . $product->description . "</p>
                             <p class=\"card-text m-0\"> <span class=\"fw-bold pe-1\"> Prezzo: </span>" . $product->price . "</p>
                             <div class=\"m-4 myfav text-black position-absolute top-0 end-0\">" . $product->categories->getIcon() . "</div>"
                             ?>
