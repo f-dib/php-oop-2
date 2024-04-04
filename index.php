@@ -35,7 +35,17 @@
                             <p class=\"card-text m-0\"> <span class=\"fw-bold pe-1\"> Prezzo: </span>" . $product->price . "</p>
                             <div class=\"m-4 myfav text-black position-absolute top-0 end-0\">" . $product->categories->getIcon() . "</div>"
                             ?>
-                            <p class="card-text m-0">" <?= is_a($product, 'Food') || is_a($product, 'Games') || is_a($product, 'Kennel') ? $product->product_info : "" ?> "</p>
+                            <p class="card-text m-0"><?= is_a($product, 'Food') || is_a($product, 'Games') || is_a($product, 'Kennel') ? $product->product_info : "" ?></p>
+                            <div class="card-text m-0">
+                                <?php
+                                        if (is_a($product, 'Food') || is_a($product, 'Kennel')) {
+                                            $small = "Taglia piccola: " . $product->sizeSmall ."Kg<br>Taglia media: ". $product->sizeMedium ."Kg<br>Taglia grande: " . $product->sizeBig . 'Kg'; // Assuming product_info is a method to get product details
+                                        } else {
+                                            $small = "";
+                                        }
+                                ?> 
+                                <?= $small ?>
+                            </div>
                             <?=
                         "</div>
                     </div>
