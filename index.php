@@ -31,8 +31,8 @@
                         <img src=\"" . $product->image . "\" class=\"card-img-top h-75\" alt=\"   \">
                         <div class=\"card-body h-25\">
                             <h5 class=\"card-title\">". $product->title . "</h5>
-                            <p class=\"card-text m-0\"> <span class=\"fw-bold pe-1\"> Durata: </span>" . $product->description . "</p>
-                            <p class=\"card-text m-0\"> <span class=\"fw-bold pe-1\"> Anno di uscita: </span>" . $product->price . "</p>
+                            <p class=\"card-text m-0\"> <span class=\"fw-bold pe-1\"> Descrizione: </span>" . $product->description . "</p>
+                            <p class=\"card-text m-0\"> <span class=\"fw-bold pe-1\"> Prezzo: </span>" . $product->price . "</p>
                             <div class=\"m-4 myfav text-black position-absolute top-0 end-0\">" . $product->categories->getIcon() . "</div>
                         </div>
                     </div>
