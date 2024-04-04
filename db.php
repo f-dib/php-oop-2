@@ -54,7 +54,7 @@
     try {
         $product6 = new Kennel("Letto Igloo per Gatti",
                                 "Cuccia in morbido tessuto con forma a igloo, ideale per creare un rifugio sicuro",
-                                "ciao", 
+                                "15", 
                                 "https://arcaplanet.vtexassets.com/arquivos/ids/272900/trixie-cuccia-per-gatto.jpg?v=637914829399400000",
                                 new Categories("Gatto"),
                                 "Dotato di cuscino interno rimovibile",
